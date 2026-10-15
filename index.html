@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Lubona ❤️</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle, #310018, #080008 75%);
+  font-family: Georgia, serif;
+}
+.scene {
+  perspective: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #ff719a, #ed004d 65%, #870027);
+  transform: rotate(-45deg);
+  animation: beat 1.2s infinite ease-in-out;
+  box-shadow: -15px 20px 65px #ff005577,
+              inset 12px -12px 35px #850029;
+}
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: inherit;
+}
+.heart::before { top: -90px; left: 0; }
+.heart::after { left: 90px; top: 0; }
+.name {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 12px white, 0 0 25px #ff0055;
+}
+@keyframes beat {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  15% { transform: rotate(-45deg) scale(1.13); }
+  30% { transform: rotate(-45deg) scale(1); }
+  45% { transform: rotate(-45deg) scale(1.09); }
+  65% { transform: rotate(-45deg) scale(1); }
+}
+</style>
+</head>
+<body>
+  <div class="scene">
+    <div class="heart">
+      <div class="name">Lubona</div>
+    </div>
+  </div>
+</body>
+</html>
